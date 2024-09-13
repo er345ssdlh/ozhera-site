@@ -4,7 +4,7 @@ import { en, zh } from './configs/index.mjs'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "OzHera",
+  title: "Apache OzHera(Incubating)",
   srcDir: 'src',
   themeConfig: {
     socialLinks: [

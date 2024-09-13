@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# OzHera User Manual
+# Apache OzHera(Incubating) User Manual
 
 ## I. Application Center
 

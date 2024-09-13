@@ -1,7 +1,7 @@
-# Ozhera Site
+# Apache OzHera(Incubating) Site
 
-This is a repository of [Apache ozhera website](https://ozhera.apache.org).
-The repository of Apache ozhera can be found [here](https://github.com/apache/ozhera).
+This is a repository of [Apache OzHera(Incubating) website](https://ozhera.apache.org).
+The repository of Apache OzHera(Incubating) can be found [here](https://github.com/apache/ozhera).
 
 To get in touch with us please use the dev@ozhera.apache.org mailing list.
 
