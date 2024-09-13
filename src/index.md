@@ -1,5 +1,9 @@
 <script setup>
-import RedirectHome from '@theme/components/RedirectHome.vue'
+import { defineClientComponent } from 'vitepress'
+
+const RedirectHome = defineClientComponent(() => {
+  return import('@theme/components/RedirectHome.vue')
+})
 </script>
 
 <RedirectHome />
