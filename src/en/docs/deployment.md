@@ -2,13 +2,13 @@
 outline: deep
 ---
 
-# OzHera Deployment Documentation
+# Apache OzHera(Incubating) Deployment Documentation
 
 ## 1. Deployment Instructions
 
-The purpose of the OzHera operator is to launch an OzHera platform in a specified namespace in the k8s cluster. This documentation is suitable for R&D/operations staff with basic k8s knowledge (PV, PVC, Service, Pod, Deployment, DaemonSet, etc.).
+The purpose of the Apache OzHera(Incubating) operator is to launch an Apache OzHera(Incubating) platform in a specified namespace in the k8s cluster. This documentation is suitable for R&D/operations staff with basic k8s knowledge (PV, PVC, Service, Pod, Deployment, DaemonSet, etc.).
 
-OzHera is an enterprise-level observability platform with a very high complexity during deployment. Please read the following deployment documentation and related [operator introduction video](https://mp.weixin.qq.com/s?__biz=MzkwMjQzMzMxMg==&mid=2247483720&idx=1&sn=c38fca2d3e82de43ce22acad73a1be21&chksm=c0a4de07f7d35711c5cba634c3833708db19fcc9303a50b77f8c1601831cac8e9520e3f32ff5&token=1000658198&lang=zh_CN#rd) carefully before deployment.
+Apache OzHera(Incubating) is an enterprise-level observability platform with a very high complexity during deployment. Please read the following deployment documentation and related [operator introduction video](https://mp.weixin.qq.com/s?__biz=MzkwMjQzMzMxMg==&mid=2247483720&idx=1&sn=c38fca2d3e82de43ce22acad73a1be21&chksm=c0a4de07f7d35711c5cba634c3833708db19fcc9303a50b77f8c1601831cac8e9520e3f32ff5&token=1000658198&lang=zh_CN#rd) carefully before deployment.
 
 ## 2. Deployment Steps
 
@@ -20,7 +20,7 @@ ozhera-all/ozhera-operator/ozhera-operator-server/src/main/resources/operator/
 
   `kubectl apply -f ozhera_operator_auth.yaml`
 
-### 2.2 Create ozhera CRD
+### 2.2 Create Apache OzHera(Incubating) CRD
 
 - Execute the command to generate the crd yaml:
 
@@ -32,7 +32,7 @@ ozhera-all/ozhera-operator/ozhera-operator-server/src/main/resources/operator/
 
   `kubectl apply -f ozhera_operator_deployment.yaml`
 
-- Ensure that the deployed operator service port 7001 is externally accessible. The deployment of ozhera requires operations on the external page provided by the operator. In the default example, the LoadBalancer method is used to expose the externally accessible ip and port. If other methods are needed, modify the yaml yourself.
+- Ensure that the deployed operator service port 7001 is externally accessible. The deployment of Apache OzHera(Incubating) requires operations on the external page provided by the operator. In the default example, the LoadBalancer method is used to expose the externally accessible ip and port. If other methods are needed, modify the yaml yourself.
 
 ![ozhera-operator-deployment.png](/images/ozhera-operator-deployment.jpg)
 
@@ -62,12 +62,12 @@ You will see the following interface:
 
 #### 2.4.3 Confirm k8s access method
 
-This step is to generate the access ip:port of the external page required in the ozhera platform. Currently, only the k8s LoadBalancer and NodePort methods are supported. By default, the LB mode will be tried first. If not supported, select NodePort (if the IP of NodePort is not open for external access, you need to set up a proxy separately, it is recommended that the cluster turn on LB).
+This step is to generate the access ip:port of the external page required in the Apache OzHera(Incubating) platform. Currently, only the k8s LoadBalancer and NodePort methods are supported. By default, the LB mode will be tried first. If not supported, select NodePort (if the IP of NodePort is not open for external access, you need to set up a proxy separately, it is recommended that the cluster turn on LB).
 
 ![operator-interview1.jpg](/images/operator-interview1.jpg)
 ![operator-interview2.jpg](/images/operator-interview2.jpg)
 
-Remember ozhera.homepage.url, after the ozhera cluster is built, the default access address is: http://${ozhera.homepage.url}
+Remember ozhera.homepage.url, after the Apache OzHera(Incubating) cluster is built, the default access address is: http://${ozhera.homepage.url}
 
 #### 2.4.4 Cluster Configuration
 
@@ -91,13 +91,13 @@ The purpose is to select a usable mysql database for ozhera.
 - If you already have a database and don't need k8s to create it:
   1. Turn off the "Create resources based on yaml" button;
   2. Fill in the correct existing database url, username, and password;
-  3. By default, the operator will automatically modify the database to create the ozhera database and table. **If the account you entered does not have permission to create a library or table, you need to manually create the ozhera database and table in the target library in advance.** The create table statement is in the operator source code ozhera-all/ozhera-operator/ozheraoperator-server/src/main/resources/ozhera_init/mysql/sql directory.
+  3. By default, the operator will automatically modify the database to create the Apache OzHera(Incubating) database and table. **If the account you entered does not have permission to create a library or table, you need to manually create the Apache OzHera(Incubating) database and table in the target library in advance.** The create table statement is in the operator source code ozhera-all/ozhera-operator/ozheraoperator-server/src/main/resources/ozhera_init/mysql/sql directory.
 
 ![ozhera-mysql2.jpg](/images/ozhera-mysql2.jpg)
 
 ##### OzHera-es
 
-The goal is to select an ES cluster available to OzHera and create the index template required by OzHera in ES.
+The goal is to select an ES cluster available to Apache OzHera(Incubating) and create the index template required by Apache OzHera(Incubating) in ES.
 
 - If you need k8s to automatically set up an ES:
 
@@ -111,7 +111,7 @@ The goal is to select an ES cluster available to OzHera and create the index tem
 - If you already have ES, you don't need k8s to create it:
   1. Turn off the "Create resources based on yaml" button;
   2. Fill in the correct url, account, and password of the existing ES cluster;
-  3. By default, the operator will automatically create the index template. **If the account you entered does not have permission to create an index template, you need to manually create the index template required by OzHera in advance**. OzHera's index template is stored in the operator source code run.mone.ozhera.operator.common.ESIndexConst in json format.
+  3. By default, the operator will automatically create the index template. **If the account you entered does not have permission to create an index template, you need to manually create the index template required by Apache OzHera(Incubating) in advance**. OzHera's index template is stored in the operator source code run.mone.ozhera.operator.common.ESIndexConst in json format.
 
 ![ozhera-es2.jpg](/images/ozhera-es2.jpg)
 
@@ -129,7 +129,7 @@ The purpose is to select a RocketMQ available for ozhera.
 - If you already have RocketMQ, you don't need k8s to set it up:
   1. Turn off the "Create resources based on yaml" button;
   2. Fill in the correct url, accessKey, and secretKey of the existing RocketMQ cluster;
-  3. By default, the operator will automatically create the topics required by OzHera. **If the url, ak, and sk you entered do not have permission to create topics, or if the existing RocketMQ cluster does not allow topic creation through the API, you need to manually create the required topics in advance**. The topics required by OzHera are stored in the "topics" member variable of the run.mone.ozhera.operator.service.RocketMQSerivce class.
+  3. By default, the operator will automatically create the topics required by OzHera. **If the url, ak, and sk you entered do not have permission to create topics, or if the existing RocketMQ cluster does not allow topic creation through the API, you need to manually create the required topics in advance**. The topics required by Apache OzHera(Incubating) are stored in the "topics" member variable of the run.mone.ozhera.operator.service.RocketMQSerivce class.
 
 ![ozhera-rocketmq2.jpg](/images/ozhera-rocketmq2.jpg)
 
@@ -151,7 +151,7 @@ The goal is to select a Redis available for ozhera.
 
 ##### OzHera-Nacos
 
-It is the configuration and registration center inside the ozhera cluster. This cluster is recommended to use the yaml creation method. If the business needs to provide Nacos by itself, please provide the Nacos version 1.x first.
+It is the configuration and registration center inside the Apache OzHera(Incubating) cluster. This cluster is recommended to use the yaml creation method. If the business needs to provide Nacos by itself, please provide the Nacos version 1.x first.
 
 - If you need k8s to automatically set up a Nacos:
 
@@ -279,7 +279,7 @@ Please note:
 
 ##### OzHera-fe
 
-ozhera-fe is responsible for building the yaml of the ozhera front page.
+ozhera-fe is responsible for building the yaml of the Apache OzHera(Incubating) front page.
 
 Please note:
 

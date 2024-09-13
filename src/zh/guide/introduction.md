@@ -1,17 +1,17 @@
-# OzHera
+# Apache OzHera(Incubating)
 
-## OzHera是什么
+## Apache OzHera(Incubating)是什么
 
-OzHera是一个云原生时代的应用观测平台(APM)，以应用为核心，集指标监控、链路追踪、日志、报警等能力于一身。平台使命是提升应用线上稳定性，帮助业务在遇到故障时能做到1分钟发现、5分钟定位。
+Apache OzHera(Incubating)是一个云原生时代的应用观测平台(APM)，以应用为核心，集指标监控、链路追踪、日志、报警等能力于一身。平台使命是提升应用线上稳定性，帮助业务在遇到故障时能做到1分钟发现、5分钟定位。
 
 ## 架构
 
-![ozhera](/images/architecture.png)
+![Apache OzHera(Incubating)](/images/architecture.png)
 
 ## 特性 {#ozhera-features}
 
 - <font color="red">拥抱云原生</font>
-  - 遵循Opentracing标准，集成OpenTelemetry、Grafana、Prometheus、ES、CAdvisor等多个开源明星产品; 同时OzHera深度适配K8S，提供一键在K8S部署的operator.
+  - 遵循Opentracing标准，集成OpenTelemetry、Grafana、Prometheus、ES、CAdvisor等多个开源明星产品; 同时Apache OzHera(Incubating)深度适配K8S，提供一键在K8S部署的operator.
 - <font color="red">报警准：业务可用性指标</font>
   - 业务可用性 = 1 - "异常"请求数/总请求数。"异常"请求的定义如下：包含为RPC层面的异常(比如HTTP 5xx)、及业务错误码封装的异常，我们内置了一套两层错误码规范也支持业务自定义，这样我们通过一个指标就能够很准确的表达系统真实的健康状况，从此告别无效告警的干扰。
 - <font color="red">定位快：metrics-tracing-logging联动</font>
@@ -24,7 +24,7 @@ OzHera是一个云原生时代的应用观测平台(APM)，以应用为核心，
 
 ## 用户列表
 
-如果您正在使用OzHera，并且认为它对您有所帮助，或者您希望为其贡献代码，请将您的公司添加到用户列表中，以便让我们了解您的需求。
+如果您正在使用Apache OzHera(Incubating)，并且认为它对您有所帮助，或者您希望为其贡献代码，请将您的公司添加到用户列表中，以便让我们了解您的需求。
 
 |![xiao mi](/images/userlist/mi.png)|![auchosaur games](/images/userlist/auchosaur_games.png)|![lingdong](/images/userlist/lingdong.png)|![airstar](/images/userlist/airstar.png)|
 | :---: | :---: | :---: | :---: |

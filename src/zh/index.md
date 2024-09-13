@@ -1,17 +1,17 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: page
-title: OzHera - 云原生时代的应用观测平台(APM)
+title: Apache OzHera(Incubating)- 云原生时代的应用观测平台(APM)
 hero:
-  name: OzHera
+  name: Apache OzHera(Incubating)
   text: 云原生时代的应用观测平台(APM)
-  tagline: OzHera是一个云原生时代的应用观测平台(APM)，以应用为核心，集指标监控、链路追踪、日志、报警等能力于一身。平台使命是提升应用线上稳定性，帮助业务在遇到故障时能做到1分钟发现、5分钟定位。
+  tagline: Apache OzHera(Incubating)是一个云原生时代的应用观测平台(APM)，以应用为核心，集指标监控、链路追踪、日志、报警等能力于一身。平台使命是提升应用线上稳定性，帮助业务在遇到故障时能做到1分钟发现、5分钟定位。
   image:
     src: /images/architecture.png
     alt: architecture
   actions:
     - theme: brand
-      text: OzHera是什么
+      text: Apache OzHera(Incubating)是什么
       link: /zh/guide/introduction.md
     - theme: alt
       text: 快速开始

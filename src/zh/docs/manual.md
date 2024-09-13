@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# OzHera用户手册
+# Apache OzHera(Incubating)用户手册
 
 ## 一、应用中心
 

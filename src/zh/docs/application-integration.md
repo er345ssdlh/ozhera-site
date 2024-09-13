@@ -2,11 +2,11 @@
 outline: deep
 ---
 
-# OzHera接入文档
+# Apache OzHera(Incubating)接入文档
 
 ## 应用部署的依赖
 
-接入OzHera的应用，需要依赖探针、jvm参数、环境变量以及log-agent服务
+接入Apache OzHera(Incubating)的应用，需要依赖探针、jvm参数、环境变量以及log-agent服务
 
 ### 1、探针
 
@@ -172,9 +172,9 @@ yaml文件示例”中的应用来进行录入，如下图所示：
 
 由于Hera中的日志、trace数据都是由log-agent采集，所以我们需要在Hera日志配置中配置采集信息，告诉log-agent去哪采集，以及采集后发送给谁。
 
-### 1、访问OzHera日志页面
+### 1、访问Apache OzHera(Incubating)日志页面
 
-我们通过访问operator生成的ozhera首页的链接，在首页头部title中，点击“日志服务”，进入OzHera日志的界面。
+我们通过访问operator生成的ozhera首页的链接，在首页头部title中，点击“日志服务”，进入Apache OzHera(Incubating)日志的界面。
 
 ![operator-url2](/images/operator-url2.png)
 
