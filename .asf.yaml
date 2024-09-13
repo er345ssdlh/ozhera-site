@@ -1,0 +1,7 @@
+github:
+  description: "Website sources for the Apache OzHera website"
+  homepage: https://ozhera.apache.org/
+  labels:
+    - apache
+    - ozhera
+    - website
