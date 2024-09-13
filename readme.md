@@ -1,4 +1,4 @@
-# Ozhera Docs
+# Ozhera Site
 
 This is a repository of [Apache ozhera website](https://ozhera.apache.org).
 The repository of Apache ozhera can be found [here](https://github.com/apache/ozhera).
