@@ -1,39 +1,28 @@
 <script setup lang="ts">
-import VPHomeHero from 'vitepress/dist/client/theme-default/components/VPHomeHero.vue'
-import VPHomeFeatures from 'vitepress/dist/client/theme-default/components/VPHomeFeatures.vue'
-import { useData } from 'vitepress'
+import CustomizeOzHera from "./CustomizeOzHera.vue";
+import CustomizeFeatures from "./CustomizeFeatures.vue";
+import { useData } from "vitepress";
 
-const { frontmatter } = useData()
+const { frontmatter } = useData();
 </script>
 
 <template>
   <div class="VPHome">
-    <slot name="home-hero-before" />
-    <VPHomeHero>
-      <template #home-hero-info-before><slot name="home-hero-info-before" /></template>
-      <template #home-hero-info><slot name="home-hero-info" /></template>
-      <template #home-hero-info-after><slot name="home-hero-info-after" /></template>
-      <template #home-hero-actions-after><slot name="home-hero-actions-after" /></template>
-      <template #home-hero-image><slot name="home-hero-image" /></template>
-    </VPHomeHero>
-    <slot name="home-hero-after" />
+    <CustomizeOzHera
+      v-if="frontmatter.ozHera"
+      class="CustomizeOzHera"
+      :ozHeraData="frontmatter.ozHera"
+    />
 
-    <slot name="home-features-before" />
-    <VPHomeFeatures />
-    <slot name="home-features-after" />
-
-    <VPHomeContent v-if="frontmatter.markdownStyles !== false">
-      <Content />
-    </VPHomeContent>
-    <Content v-else />
+    <CustomizeFeatures
+      v-if="frontmatter.features"
+      class="customizeFeatures"
+      :features="frontmatter.features"
+    />
   </div>
 </template>
 
 <style scoped>
-.VPHome {
-  margin-bottom: 96px;
-}
-
 @media (min-width: 768px) {
   .VPHome {
     margin-bottom: 128px;
