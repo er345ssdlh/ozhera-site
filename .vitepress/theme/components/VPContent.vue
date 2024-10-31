@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { useData } from 'vitepress'
-import { useSidebar } from 'vitepress/theme'
-import VPDoc from 'vitepress/dist/client/theme-default/components/VPDoc.vue'
-import VPPage from 'vitepress/dist/client/theme-default/components/VPPage.vue'
+import { useData } from "vitepress";
+import { useSidebar } from "vitepress/theme";
+import VPDoc from "vitepress/dist/client/theme-default/components/VPDoc.vue";
+import VPPage from "vitepress/dist/client/theme-default/components/VPPage.vue";
 
-import NotFound from '../NotFound.vue'
-import VPHome from './VPHome.vue'
+import NotFound from "../NotFound.vue";
+import VPHome from "./VPHome.vue";
 
-const { page, frontmatter } = useData()
-const { hasSidebar } = useSidebar()
+const { page, frontmatter } = useData();
+const { hasSidebar } = useSidebar();
 </script>
 
 <template>
@@ -17,7 +17,7 @@ const { hasSidebar } = useSidebar()
     id="VPContent"
     :class="{
       'has-sidebar': hasSidebar,
-      'is-home': frontmatter.layout === 'home'
+      'is-home': frontmatter.layout === 'home',
     }"
   >
     <slot name="not-found" v-if="page.isNotFound"><NotFound /></slot>
@@ -29,14 +29,18 @@ const { hasSidebar } = useSidebar()
 
     <VPHome v-else-if="frontmatter.layout === 'home'">
       <template #home-hero-before><slot name="home-hero-before" /></template>
-      <template #home-hero-info-before><slot name="home-hero-info-before" /></template>
+      <template #home-hero-info-before
+        ><slot name="home-hero-info-before"
+      /></template>
       <template #home-hero-info><slot name="home-hero-info" /></template>
-      <template #home-hero-info-after><slot name="home-hero-info-after" /></template>
-      <template #home-hero-actions-after><slot name="home-hero-actions-after" /></template>
+      <template #home-hero-info-after
+        ><slot name="home-hero-info-after"
+      /></template>
+      <template #home-hero-actions-after
+        ><slot name="home-hero-actions-after"
+      /></template>
       <template #home-hero-image><slot name="home-hero-image" /></template>
       <template #home-hero-after><slot name="home-hero-after" /></template>
-      <template #home-features-before><slot name="home-features-before" /></template>
-      <template #home-features-after><slot name="home-features-after" /></template>
     </VPHome>
 
     <component
@@ -53,8 +57,12 @@ const { hasSidebar } = useSidebar()
       <template #doc-after><slot name="doc-after" /></template>
 
       <template #aside-top><slot name="aside-top" /></template>
-      <template #aside-outline-before><slot name="aside-outline-before" /></template>
-      <template #aside-outline-after><slot name="aside-outline-after" /></template>
+      <template #aside-outline-before
+        ><slot name="aside-outline-before"
+      /></template>
+      <template #aside-outline-after
+        ><slot name="aside-outline-after"
+      /></template>
       <template #aside-ads-before><slot name="aside-ads-before" /></template>
       <template #aside-ads-after><slot name="aside-ads-after" /></template>
       <template #aside-bottom><slot name="aside-bottom" /></template>
@@ -93,7 +101,9 @@ const { hasSidebar } = useSidebar()
 @media (min-width: 1440px) {
   .VPContent.has-sidebar {
     padding-right: calc((100vw - var(--vp-layout-max-width)) / 2);
-    padding-left: calc((100vw - var(--vp-layout-max-width)) / 2 + var(--vp-sidebar-width));
+    padding-left: calc(
+      (100vw - var(--vp-layout-max-width)) / 2 + var(--vp-sidebar-width)
+    );
   }
 }
 </style>
