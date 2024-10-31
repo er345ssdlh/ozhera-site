@@ -1,6 +1,6 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
-layout: page
+layout: home
 
 hero:
   name: Apache OzHera(Incubating)
@@ -30,9 +30,3 @@ features:
   - title: <font color="red">Artificial Intelligence</font>
     details: The cutting-edge artificial intelligence technology has been introduced, using AI tools to help you quickly pinpoint issues, analyze the causes in-depth, and provide personalized repair suggestions. Let intelligence lead your application monitoring, achieving intelligent management and optimization.
 ---
-
-<script setup>
-import Home from '@theme/components/Home.vue'
-</script>
-
-<Home />

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { useData } from 'vitepress'
 import HomeHero from './HomeHero.vue'
 import VPFeatures from './Features.vue'

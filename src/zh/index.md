@@ -1,9 +1,9 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
-layout: page
+layout: home
 title: Apache OzHera(Incubating)- 云原生时代的应用观测平台(APM)
 hero:
-  name: Apache OzHera(Incubating)
+  name: Apache OzHera (Incubating)
   text: 云原生时代的应用观测平台(APM)
   tagline: Apache OzHera(Incubating)是一个云原生时代的应用观测平台(APM)，以应用为核心，集指标监控、链路追踪、日志、报警等能力于一身。平台使命是提升应用线上稳定性，帮助业务在遇到故障时能做到1分钟发现、5分钟定位。
   image:
@@ -30,9 +30,3 @@ features:
   - title: <font color="red">人工智能</font>
     details: 引入了前沿的人工智能技术，利用AI工具帮助您快速定位问题、深入分析原因，并提供个性化的修复建议。让智能化引领您的应用观测，实现智能化的管理和优化。
 ---
-
-<script setup>
-import Home from '@theme/components/Home.vue'
-</script>
-
-<Home />
